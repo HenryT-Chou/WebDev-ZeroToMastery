@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<body>
+  <a href="index.html">
+    <b>Back to Home Page</b>
+  </a>
+  <!-- action= is where you want to send the info once the form is submitted if you don't do anything, it will attach a query string to the url and send it to the servers-->
+  <form action="">
+    First name:<input type="text" name="firstname"> <br>
+    Last name: <input type="text" name="lastname"> <br>
+    Email: <input type="email" name="email" required> <br>
+    Password: <input type="password" name="password" min="5"><br>
+    Birthday: <input type="date" name="birthday"> <br>
+
+    Gender: 
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender"value="female">Female<br>
+
+    Which pets do you already own?<br>
+    <input type="checkbox" name="cat">Cats<br>
+    <input type="checkbox" name="dog">Dogs<br>
+    <input type="checkbox" name="other">Other<br>
+
+    Vehicle: 
+    <select name="carType">
+      <option value="sedan" value="sedan">Sedan</option>
+      <option value="suv" value="suv">SUV</option>
+      <option value="minivan" value="minivan">Minivan</option>
+    </select><br><br>
+    
+    <!-- without a set value, the default is a button that says "submit" -->
+    <input type="submit" value="Sign me up for more puppies!" >
+    <input type="reset">
+
+  </form>
+  
+</body>
+</html>
+
+<!-- Example URL string after "submit" button was pressed: ?firstname=Joe&lastname=Bob&email=bob%40gmail.com&password=123456&birthday=56789-12-31&gender=male&dog=on&carType=suv -->
+
+<!-- ? <-lets the server know that it's groing to return values
+  firstname=Joe
+  &lastname=Bob
+  &email=bob%40gmail.com
+  &password=123456
+  &birthday=56789-12-31
+  &gender=male
+  &dog=on
+  &carType=suv -->
