@@ -1,0 +1,27 @@
+*{
+  text-align: right;
+}
+body{
+  background-color: rgba(112, 142, 164);
+}
+/* with a space, h2 p, that means all p within h2 */
+h2,p{
+  text-align: center;
+  border: 5px solid rgba(212, 166, 106, 0.75);
+  border-radius: 10px;
+}
+li{
+  list-style: none;
+  display: inline-table;
+}
+.webtext{
+  border: 2px dashed;
+  border-radius: 20px;
+  border-color: skyblue;
+}
+
+#products{
+  background-color: rgba(0,0,200,0.35);
+  
+}
+

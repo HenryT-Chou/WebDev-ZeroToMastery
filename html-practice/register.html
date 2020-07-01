@@ -10,6 +10,12 @@
     <b>Back to Home Page</b>
   </a>
   <!-- action= is where you want to send the info once the form is submitted if you don't do anything, it will attach a query string to the url and send it to the servers-->
+
+  <!-- Additional notes -->
+  <!-- <div></div> lets you break up content when styling with css
+  <span></span> is an inline element and will only affect that line-->
+  <!-- forms have 2 methods of storing the submitted information. 1) using method="get" 2) method="Post" git is better for non-secure data, use post when size restriction is an issue. url char limit is 3000 -->
+  
   <form action="">
     First name:<input type="text" name="firstname"> <br>
     Last name: <input type="text" name="lastname"> <br>
@@ -19,7 +25,7 @@
 
     Gender: 
       <input type="radio" name="gender" value="male">Male
-      <input type="radio" name="gender"value="female">Female<br>
+      <input type="radio" name="gender" value="female">Female<br>
 
     Which pets do you already own?<br>
     <input type="checkbox" name="cat">Cats<br>
@@ -28,9 +34,9 @@
 
     Vehicle: 
     <select name="carType">
-      <option value="sedan" value="sedan">Sedan</option>
-      <option value="suv" value="suv">SUV</option>
-      <option value="minivan" value="minivan">Minivan</option>
+      <option value="sedan">Sedan</option>
+      <option value="suv">SUV</option>
+      <option value="minivan">Minivan</option>
     </select><br><br>
     
     <!-- without a set value, the default is a button that says "submit" -->

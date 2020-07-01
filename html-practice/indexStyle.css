@@ -1,0 +1,25 @@
+/* CSS = cascading style sheet so effects are applied top down, with the last effect overriding previous */
+
+body{
+  color: azure;
+  background-color: grey;
+}
+/* sadly this first h1 will be overwritten */
+h1{
+  color: blue;
+}
+
+h1{
+  color: skyblue;
+  text-align: center;
+  border: 5px dashed pink;
+  cursor: grab;
+}
+
+button{
+  background-color: rgb(19, 116, 228);
+}
+
+li{
+  list-style: none;
+}

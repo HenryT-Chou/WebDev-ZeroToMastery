@@ -1,0 +1,13 @@
+
+body{
+  background-color: rgba(112, 142, 164);
+}
+h2{
+  text-align: center;
+  border: 5px solid rgba(212, 166, 106, 0.75);
+  border-radius: 10px;
+}
+li{
+  list-style: none;
+  display: inline-table;
+}
