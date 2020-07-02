@@ -1,0 +1,35 @@
+body{
+  margin-top: 0px;
+  margin-right: auto;
+}
+
+h1{
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 2px solid rgba(0,0,250,.75);
+  border-right: 2px solid rgba(0,0,250,.75);
+  border-left: 2px solid rgba(0,0,250,.75);
+  box-shadow: 3px 3px 3px rgba(100,100,100);
+  text-align: center;
+  justify-content: center;
+}
+
+.imgcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+
+}
+
+img{
+  height: 300px;
+  width:  450x;
+  margin: 10px;
+  /* transition is how long it will take to complete the transform */
+  transition: all 0.5s;
+}
+img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
