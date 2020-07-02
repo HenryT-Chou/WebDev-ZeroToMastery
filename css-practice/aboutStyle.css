@@ -1,4 +1,7 @@
-
+*{
+  font-family: 'Poiret One', cursive;
+  text-align: right;
+}
 body{
   background-color: rgba(112, 142, 164);
 }
@@ -7,7 +10,31 @@ h2{
   border: 5px solid rgba(212, 166, 106, 0.75);
   border-radius: 10px;
 }
+p{
+  text-align: center;
+  
+  text-transform: capitalize;
+  font-size: 22;
+  font-weight: bold;
+}
+img{
+  /* float is a way to nestle images */
+  float: left; 
+  /* clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; */
+
+}
+h3{
+  text-align: center;
+  text-decoration: underline;
+}
 li{
   list-style: none;
   display: inline-table;
+}
+.leadParagraph{
+  /* em makes your size relative to the surrounding text; rem makes your text relative to the root file or in this case the html default size */
+  font-size: 1.5em;
 }
