@@ -2,6 +2,7 @@
 body{
     margin: auto 0;
 }
+
 .zone {
     /* we don't need these in the final version */
     /* padding:30px 50px;
@@ -42,7 +43,7 @@ body{
 }
 
 .push:hover{
-    /* Using margin right might not be the best fix but it works lol */
+    /* Problem solved: Using margin right might not be the best fix but it works lol */
     margin-right: .7em;
     margin-left: auto ;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
@@ -51,13 +52,13 @@ body{
     padding: 5px;
 }
 
-/* give all our header list items a small padding */
+/* give all our list items a small padding */
 li{
     padding: 20px;
     
 }
 
-/* changes hypertext to remove line and change default color */
+/* changes all hypertext to remove line and change default color */
 a{
     color: rgba(255,255,255);
     text-decoration: none;
@@ -110,28 +111,25 @@ a{
     background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
 }
 
-/***********************************************************************
- *  Yellow Background
- **********************************************************************/
-.yellow{
-    background: #F3AAAA; /* Old browsers */
-    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
-    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
-}
-
 /* Grid */
 .grid{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-content: auto;
+    justify-content: auto;
 }
+
 /* select all img within box */
 .box > img{
     width: 100%;
+    align-content: center;
+    justify-content: center;
+
+}
+.box{
+    background-color: rgba(0,0,100,0.5);
+    padding 120px;
 
 }
 /***********************************************************************
@@ -145,4 +143,28 @@ a{
     background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+.footer-nav{
+    font-size: .5em;
+    margin: auto;
+    display: flex;
+    list-style: none;
+}
+
+.pseudoButton-footer:hover{
+    text-decoration: underline;
+}
+
+/***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.yellow{
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
 }
