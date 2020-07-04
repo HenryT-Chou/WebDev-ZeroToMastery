@@ -1,20 +1,74 @@
+/* the browser it self has some default margin creating 2 while columns along either side of the page so to remove it: */
+body{
+    margin: auto 0;
+}
 .zone {
-    padding:30px 50px;
-    margin:40px 60px;
+    /* we don't need these in the final version */
+    /* padding:30px 50px;
+    margin:40px 60px; */
     cursor:pointer;
-    display:inline-block;
     color:#FFF;
     font-size:2em;
     border-radius:4px;
     border:1px solid #bbb;
     transition: all 0.3s linear;
+    /* display: inline-block; */
 }
 
+/* upon hovering over each zone give it a shadow */
 .zone:hover {
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+/* NAV */
+.main-nav{
+    /* you can use media queries to make layout more responsive for certain sized screens but flexbox and cssgrid takes care of most of that  */
+    display: flex;
+    list-style: none;
+    font-size: 0.75em;
+    margin: 0;
+    
+}
+
+/* things here only apply to the "contact us" link/button */
+.push{
+    margin-left: auto ;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    
+}
+
+.push:hover{
+    /* Using margin right might not be the best fix but it works lol */
+    margin-right: .7em;
+    margin-left: auto ;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    background-color: rgba(0,190,0,0.55);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* give all our header list items a small padding */
+li{
+    padding: 20px;
+    
+}
+
+/* changes hypertext to remove line and change default color */
+a{
+    color: rgba(255,255,255);
+    text-decoration: none;
+}
+
+/* technically class pseudoButton atrritubtes can be added to the "a" selector I Just wanted to be extra */
+.pseudoButton:hover{
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    background-color: rgba(0,190,0,0.55);
+    border-radius: 8px;
+    padding: 5px;
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
@@ -29,6 +83,18 @@
     background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+
+}
+/* Cover */
+.container{
+    display: flex;
+    /* justify makes sure content is centered on the horizontal */
+    justify-content: center;
+    /* align makes sure items are centered on the vertical axis */
+    align-items: center;
+    /* vh = viewport height (window) 
+    so in this case cover will be #% of the window of the browser */
+    height: 50vh;
 }
 
 /***********************************************************************
@@ -57,6 +123,17 @@
     background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
 }
 
+/* Grid */
+.grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+/* select all img within box */
+.box > img{
+    width: 100%;
+
+}
 /***********************************************************************
  *  Blue Background
  **********************************************************************/
