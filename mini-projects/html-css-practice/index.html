@@ -9,26 +9,26 @@
 <body>
   <header>
     <nav class="navbar">
-      <a class="navbar-brand" href="index.html"> APEX
+      <a class="navbar-brandname" href="index.html"> APEX
         <img class="brandlogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzmsN2v2TXPOKyh1tjBUAWreslnK3cbMaDNQ&usqp=CAU" alt="Apex Logo">
       </a>
 
-      <div class="navbar-menu">
-        <ul>
+        <ul class="navbar-menu">
           <li><a href=""> Home </a></li>
-          <div class="dropdown-menu"></div>
-            <li><a class="dropdown-item" href=""> About </a></li>
-            <li><a class="dropdown-item" href="">Our Story</a></li>
-            <li><a class="dropdown-item" href="">Our Products</a></li>
-          </div>
+          <li><a href=""> About </a></li>
+          <li><a href="">Our Story</a></li>
+          <li><a href="">Our Products</a></li>
           <li><a href=""> Contact Us </a></li>
         </ul>
        
-        <form action="">
-        <input type="search" placeholder="What are you looking for?">
-        <button>Submit</button>
-        </form>
-      </div>  
+        <!-- Notice how there are 2 pushes, the fist push applies to the button, then I had to make the form a class of push as well to push that to the right -->
+        <div class="push">
+          <form class= "push" action="">
+          <input type="search" placeholder="Search">
+          <button class="button" >Search</button>
+          </form>
+        </div>
+        
     </nav>
   </header>
   

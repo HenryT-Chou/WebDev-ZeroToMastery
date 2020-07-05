@@ -1,3 +1,49 @@
+.body{
+    margin: 0;
+}
+/* this makes sure the whole blue bar is flex */
+.navbar{
+    display: flex;
+    background-color: rgba(0,0,100,0.75);
+    margin: 0;    
+}
+/* this adjusts the brand's name next to the photo */
+.navbar-brandname{
+    display:flex;
+    align-content: center;
+    align-items: center;
+}
+/* this adjusts the brandlogo */
+.brandlogo{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 2.5em;
+    margin: 0;
+    padding: 5px;
+}
+/* this is used to adjust the 5 main option on the nav bar */
+
 .navbar-menu{
+    display: flex;
     list-style-type: none;
+    padding: 10px;
+}
+/* this is used to push the 2 items to the right */
+.push{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+/* this applies only to the search button */
+.button{
+    display: flex;
+    align-content: center;
+}
+/* this adjusts all text that links to somthing */
+a{
+    color: rgba(255,255,255,1);
+    padding: 10px;
+    text-decoration: none;
 }

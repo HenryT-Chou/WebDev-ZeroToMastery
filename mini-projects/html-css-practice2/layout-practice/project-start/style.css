@@ -1,80 +1,50 @@
-/* the browser it self has some default margin creating 2 while columns along either side of the page so to remove it: */
 body{
-    margin: auto 0;
+    margin: 0;
 }
-
 .zone {
-    /* we don't need these in the final version */
     /* padding:30px 50px;
     margin:40px 60px; */
     cursor:pointer;
+    /* display:inline-block; */
     color:#FFF;
     font-size:2em;
     border-radius:4px;
     border:1px solid #bbb;
     transition: all 0.3s linear;
-    /* display: inline-block; */
 }
 
-/* upon hovering over each zone give it a shadow */
 .zone:hover {
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
+
 .sticky{
     position: fixed;
     top: 0;
     width: 100%;
 }
-/* NAV */
-.main-nav{
-    /* you can use media queries to make layout more responsive for certain sized screens but flexbox and cssgrid takes care of most of that  */
+
+.nav-menu{
     display: flex;
     list-style: none;
-    font-size: 0.75em;
+    font-size: .7em;
     margin: 0;
-    
 }
 
-/* things here only apply to the "contact us" link/button */
-.push{
-    margin-left: auto ;
-    margin-top: auto;
-    margin-bottom: auto;
-    align-items: center;
-    
-}
-
-.push:hover{
-    /* Problem solved: Using margin right might not be the best fix but it works lol */
-    margin-right: .7em;
-    margin-left: auto ;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    background-color: rgba(0,190,0,0.55);
-    border-radius: 5px;
-    padding: 5px;
-}
-
-/* give all our list items a small padding */
-li{
-    padding: 20px;
-    
-}
-
-/* changes all hypertext to remove line and change default color */
-a{
-    color: rgba(255,255,255);
+.nav-menu-option{
+    color: rgba(255,255,255,1);
+    padding: 10px;
+    /* text decor gets rid of the underline and list style gets rid of the bullet points */
     text-decoration: none;
 }
 
-/* technically class pseudoButton atrritubtes can be added to the "a" selector I Just wanted to be extra */
-.pseudoButton:hover{
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    background-color: rgba(0,190,0,0.55);
-    border-radius: 8px;
-    padding: 5px;
+.push{
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    align-items: center;
+    margin-left: auto;
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
@@ -89,18 +59,18 @@ a{
     background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
-
 }
-/* Cover */
+
+/* modifying cover */
 .container{
     display: flex;
-    /* justify makes sure content is centered on the horizontal */
     justify-content: center;
-    /* align makes sure items are centered on the vertical axis */
     align-items: center;
-    /* vh = viewport height (window) 
-    so in this case cover will be #% of the window of the browser */
     height: 50vh;
+
+}
+.cover{
+    width: 30rem;
 }
 
 /***********************************************************************
@@ -116,52 +86,19 @@ a{
     background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
 }
 
-/* Grid */
-.grid{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    align-content: auto;
-    justify-content: auto;
-}
-
-/* select all img within box */
-.box > img{
-    width: 100%;
-    height: 80%
-    align-content: center;
-    justify-content: center;
-
-}
-.box{
-    background-color: rgba(0,0,100,0.5);
-    padding 120px;
-
-}
-/***********************************************************************
- *  Blue Background
- **********************************************************************/
-.blue{
-    background: #7abcff; /* Old browsers */
-    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
-    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
-}
-
-.footer-nav{
-    font-size: .5em;
-    margin: auto;
+.footer-menu{
     display: flex;
+    margin: 0;
     list-style: none;
+    color: rgba(255,255,255,1);
 }
 
-.pseudoButton-footer:hover{
-    text-decoration: underline;
-}
+.footer-menu-option{
+    padding: 5px;
+    text-decoration: none;
+    color: rgba(255,255,255,1);
 
+}
 /***********************************************************************
  *  Yellow Background
  **********************************************************************/
@@ -173,4 +110,39 @@ a{
     background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
     background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    gap: 20px;
+    align-content: auto;
+    justify-content: auto;
+    /* normally you will see something like
+    *  grid-template-columns: (10, fr1); or create 10 columns of 1fr (one fraction of *  the grid) auto-fill tells the grid system to automatically create as many        *  columns as it needs to display all the content and to make the size of each grid *  block a 1fr large or create a new row when smaller than 350pxs. Repeat just   *   means keep doing auto-fill of course, sometimes you want a 3x3 or w/e
+    */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.box > img{
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+
+}
+.box{
+    background-color: rgba(100,100,100,1);
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
