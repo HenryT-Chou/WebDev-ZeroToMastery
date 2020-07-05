@@ -1,4 +1,4 @@
-.body{
+body{
     margin: 0;
 }
 /* this makes sure the whole blue bar is flex */
@@ -40,6 +40,8 @@
 .button{
     display: flex;
     align-content: center;
+    margin: 5px;
+
 }
 /* this adjusts all text that links to somthing */
 a{
