@@ -1,0 +1,34 @@
+Number = (+,-,*,%, **, ++, --)
+string - text (" "), \ = ignore the next char,
+=== means equal to
+
+var cannot be a number, use camelcase (firstName, applePie)
+var first = prompt("enter 1st number");  (prompt will store as string)
+
+Number (second) will covert the value stored in second to nums instead of strings
+
+calculator example:
+var first = prompt("enter 1st number"); 
+var second = prompt("enter 2nd number");
+var sum = Number(first) + Number(second);
+alert ("The sum is: " + sum);
+
+in js undefined is a type as well, that variable has no value
+if (){
+
+}
+else if(){
+
+}
+else{
+    
+}
+
+ternary operators: && || !(not) if this and this etc.
+
+switch? 
+
+link tag for css style
+and script to link java script
+
+console.log() will log stuff to the js console in browsers to check that our stuff is working
