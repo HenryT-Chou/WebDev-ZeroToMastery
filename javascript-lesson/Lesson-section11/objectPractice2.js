@@ -35,7 +35,7 @@ var newsFeed = [
     }
 ];
 
-var login = function(userInput1,userInput2){
+function login(userInput1,userInput2){
     if (userInput1 === user1.userName && userInput2 === user1.password ){
         accountCreationCheck = true
         console.log("user logged in");
@@ -63,7 +63,7 @@ var login = function(userInput1,userInput2){
     }
 }
 
-var accountCreation = function (){
+function accountCreation(){
 
     var newUserName = prompt("what is your desired username?: ");
     var newPassword = prompt("what is your desired password?: ");
